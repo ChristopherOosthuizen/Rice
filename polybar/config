@@ -1,0 +1,4 @@
+[bar/right]
+monitor = ${env:MONITOR:fallback-value}
+
+font-0 = 
