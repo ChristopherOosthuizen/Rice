@@ -1,4 +1,65 @@
-[bar/right]
-monitor = ${env:MONITOR:fallback-value}
+include-file = ~/.config/polybar/modules.ini
 
-font-0 = 
+[colors]
+black = #282c34 
+white = #dcdfe4  
+gray = #828487
+green =#98c379  
+blue = #61afef
+red = #e06c75
+purple = #c678dd
+cyan = #56b6c2
+yellow = #e5c07b
+
+
+
+[section/basicBar]
+font-0 = "Fira Code:size=10;0"
+font-1 = FontAwesome5Free:style=Solid:size=12;0
+font-2 = FontAwesome5Free:style=Regular:size=12;0
+font-3 = FontAwesome5Brands:style=Regular:size=12;0
+font-4 = "icomoon\-feather:size=12;0"
+override-redirect = true
+module-margin-left = 2
+padding-left = 2
+padding-right = 2
+radius = 9.0
+height = 32px
+background = ${colors.black}
+foreground = ${colors.white}
+width = 19%
+offset-y = 0.5%
+wm-restack = bspwm
+
+
+
+
+[bar/right]
+inherit = section/basicBar
+modules-center = battery pulseaudio powerMenu
+offset-x = 80%
+
+[bar/left]
+inherit = section/basicBar
+offset-x = 2%
+modules-center = time cpu memory wifi 
+
+[bar/center]
+inherit = section/basicBar
+offset-x = 40.5%
+modules-center = windowTitle 
+
+[bar/rightSecond]
+inherit = bar/right
+monitor = HDMI-0
+modules-center = battery pulseaudio
+
+[bar/leftSecond]
+inherit = bar/left
+monitor = HDMI-0
+
+[bar/centerSecond]
+inherit = bar/center
+monitor = HDMI-0
+
+

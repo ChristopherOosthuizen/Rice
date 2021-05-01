@@ -1,0 +1,42 @@
+<eww>
+ <definitions>
+    <def name="clock">
+      <box>
+        The time is: {{my_time}} currently.
+      </box>
+    </def>
+    <def name="main">
+      <box>
+        <clock my_time="{{date}}"/>
+      </box>
+    </def>
+    <def name="powerOffMenu">
+      <box height="10px" spacing="3px">
+        <button onclick="eww close powerMenu">Cancel</button>
+        <button onclick="reboot">reboot</button>
+        <button onclick="shutdown">shutdown</button>
+      </box>
+    </def>
+  </definitions>
+
+  <variables>
+    <script-var name="date">
+      date
+    </script-var>
+  </variables>
+  <windows>
+    <window name="main_window" stacking="fg" focusable="false" screen="1">
+      <geometry anchor="top left" x="300px" y="50%" width="25%" height="20px"/>
+      <reserve side="left" distance="50px"/>
+      <widget>
+        <main/>
+      </widget>
+    </window>
+    <window name="powerMenu" stacking="fg" focusable="false" >
+      <geometry anchor="top left" x="88%" y="38px" width="5%" height="20px"/>
+      <widget>
+        <powerOffMenu/>
+      </widget>
+    </window>
+  </windows>
+</eww>

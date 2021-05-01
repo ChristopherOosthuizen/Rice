@@ -1,0 +1,6 @@
+rofi.theme: onehalfdark.rasi 
+configuration {
+  modi: "run";
+  font: "Fira Code 10";
+  show-icons: true;
+}
