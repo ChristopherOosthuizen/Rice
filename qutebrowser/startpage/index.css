@@ -1,0 +1,30 @@
+body{
+  background-color: #282c34;
+  color: #dcdfe4;
+  margin: auto;
+  text-align: center;
+  font-family: CozetteVector;
+  margin-top: 10%;
+}
+
+.links {
+  display: inline-block;
+  margin-left: 5%;
+  margin-right: 5%;
+  vertical-align: top;
+
+}
+
+.bookmarks {
+  text-align: center;
+  vertical-align: top;
+  overflow: none;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: #dcdfe4;
+
+  
+}
